@@ -5,7 +5,7 @@ Este repositório contém uma estrutura de arquivos `hcl` para o provisionamento
 
 ## 📦 Estrutura ##
 
-- *rds:* Provisionamento do cluster rds.
+- *rds:* Provisionamento do cluster rds e bucket s3.
 
 ### Pré-requisitos
 
@@ -15,7 +15,7 @@ Este repositório contém uma estrutura de arquivos `hcl` para o provisionamento
 ### Configuração Inicial
 
 - *Configurar o AWS CLI:* Execute ´aws configure´ e configure o perfil de autenticação com as credenciais apropriadas para provisionar a infraestrutura na região `us-east-1` juntamente com uma *access_key* e uma *secret_key*.
-- *Configurar o backend do Terraform:* A pasta `rds` possui um backend remoto cujo state é salvo em um Workspace do Terraform Cloud, por isso é necessário em execuções locais executar o [Terraform Login](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-login#start-the-login-flow).
+- *Configurar o backend do Terraform:* A pasta `rds` e `s3` possuem backend remoto cujo state é salvo em um Workspace do Terraform Cloud, por isso é necessário em execuções locais executar o [Terraform Login](https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-login#start-the-login-flow).
 
 ### Como as Actons Funcionam?
 - Para executar o Apply ou Destroy em sua infraestrutura basta selcionar o workspace `Terraform Apply/Destroy`em seguida clique em `run workflow`. Selecione ação *(apply ou destroy)*, por último escolha o módulo desejado.
@@ -44,6 +44,16 @@ Este repositório contém uma estrutura de arquivos `hcl` para o provisionamento
 ### Provisionar o Cluster rds
 
 Acesse e execute os seguintes comandos na pasta `rds:`
+
+```bash
+terraform init
+terraform apply
+
+```
+
+### Provisionar bucket S3
+
+Acesse e execute os seguintes comandos na pasta `s3:`
 
 ```bash
 terraform init
