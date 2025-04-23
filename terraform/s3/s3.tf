@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "processed_bucket" {
-  bucket = "processed-bucket"
+resource "aws_s3_bucket" "processed_bucket_techchallenge" {
+  bucket = "processed-bucket-techchallenge"
 
 }
