@@ -25,9 +25,13 @@ resource "aws_s3_bucket_policy" "processed_bucket_policy" {
         Action: [
           "s3:*"
         ],
-        Resource: "*"
+        Resource: [
+          "arn:aws:s3:::processed-bucket-techchallenge",
+          "arn:aws:s3:::processed-bucket-techchallenge/*"
+        ]
       }
     ]
   })
 }
+
 
