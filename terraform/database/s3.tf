@@ -23,9 +23,7 @@ resource "aws_s3_bucket_policy" "processed_bucket_policy" {
           AWS: "arn:aws:iam::585008076257:role/notificacao-api-irsa-role"
         },
         Action: [
-          "s3:GetObject",
-          "s3:PutObject",
-          "s3:ListBucket"
+          "s3:*"
         ],
         Resource: [
           "arn:aws:s3:::${aws_s3_bucket.processed_bucket_techchallenge.bucket}",
