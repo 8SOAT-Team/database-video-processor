@@ -26,8 +26,7 @@ resource "aws_s3_bucket_policy" "processed_bucket_policy" {
           "s3:*"
         ],
         Resource: [
-          "arn:aws:s3:::${aws_s3_bucket.processed_bucket_techchallenge.bucket}",
-          "arn:aws:s3:::${aws_s3_bucket.processed_bucket_techchallenge.bucket}/*"
+          "*"
         ]
       }
     ]
